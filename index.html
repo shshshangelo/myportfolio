@@ -547,48 +547,85 @@ When I’m not coding, I enjoy gaming and exploring creative ideas. I believe le
             </div>
         </div>
     </section>
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("XJ5wR3EcY3yW0ycyg"); // Public key mo
+  })();
 
-    <!-- Contact -->
-    <section id="contact">
-        <div class="container">
-            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What's next!</span></h6>
-            <h2 class="section-heading text-center">Get In Touch</h2>
-            <p class="text-center muted-text mt-3 mb-4">Interested in working together? We should schedule a time to chat. I'll bring the coffee.</p>
-            <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="500">
-                <div class="col-lg-8">
-                    <div class="contact-form">
-                        <form action="https://formspree.io/f/xldjelqg" method="POST">
-                            <div class="row g-2">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Name *" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email *" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="subject" name="subject"  placeholder="Subject *" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea style="resize: none;" class="form-control" id="message" name="message" rows="5" placeholder="Your message *" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <button type="submit" class="btn primary-bg-btn mt-2">Send Message <i class="bi bi-arrow-up-right"></i></button>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      emailjs.send("service_aj8p318", "template_hjnlc8m", {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        title: document.getElementById('subject').value, // must be 'title' dahil yun yung nasa EmailJS template mo
+        message: document.getElementById('message').value,
+        time: new Date().toLocaleString() // optional, pero lagay na rin for tracking
+      })
+      .then(function() {
+        document.getElementById('form-message').innerHTML = "<span style='color:green;'>Message sent successfully!</span>";
+        document.getElementById('contact-form').reset();
+      }, function(error) {
+        document.getElementById('form-message').innerHTML = "<span style='color:red;'>Failed to send message. Try again later.</span>";
+        console.log(error); // debug kung may error pa rin
+      });
+
+    });
+  });
+</script>
+
+<!-- Contact -->
+<section id="contact">
+    <div class="container">
+        <h6 class="text-center">
+            <span class="btn btn-sm theme-button theme-text">What's next!</span>
+        </h6>
+        <h2 class="section-heading text-center">Get In Touch</h2>
+        <p class="text-center muted-text mt-3 mb-4">
+            Interested in working together? We should schedule a time to chat. I'll bring the coffee.
+        </p>
+        <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="500">
+            <div class="col-lg-8">
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name *" required>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email *" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" name="subject"  placeholder="Subject *" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea style="resize: none;" class="form-control" id="message" name="message" rows="5" placeholder="Your message *" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn primary-bg-btn mt-2">
+                                    Send Message <i class="bi bi-arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="form-message" class="text-center mt-2"></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer id="footer">
