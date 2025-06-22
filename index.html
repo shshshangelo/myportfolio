@@ -56,6 +56,11 @@
 
 <body data-bs-theme="dark" data-bs-spy="scroll" data-bs-target="#navbar">
 
+    <!-- Progress Bar -->
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <!-- Preloader -->
     <div id="preloader"></div>
     
@@ -83,7 +88,7 @@
                             <li class="nav-item" data-aos="fade-down" data-aos-delay="600" data-bs-dismiss="offcanvas"><a href="#about" class="nav-link">About</a></li>
                             <li class="nav-item" data-aos="fade-down" data-aos-delay="700" data-bs-dismiss="offcanvas" ><a href="#skills" class="nav-link">Skills</a></li>
                             <li class="nav-item" data-aos="fade-down" data-aos-delay="800" data-bs-dismiss="offcanvas"><a href="#projects" class="nav-link">Projects</a></li>
-                            <li class="nav-item" data-aos="fade-down" data-aos-delay="1000" data-bs-dismiss="offcanvas"><a href="#contact" class="nav-link">Contact</a></li>
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="900" data-bs-dismiss="offcanvas"><a href="#contact" class="nav-link">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -104,19 +109,54 @@
                 </div>
                 <div class="col-lg-7 order-lg-1 hero-content">
                     <span class="h3" data-aos="fade-up" data-aos-delay="0">Hi, I'm</span>
-                    <h1 class="name" data-aos="fade-up" data-aos-delay="200"><span>Michael Angelo E. Entera</h1>
+                    <h1 class="name typing-animation" data-aos="fade-up" data-aos-delay="200">
+                        <span class="typing-text">Michael Angelo E. Entera</span>
+                    </h1>
                     <button type="button" class="btn btn-sm mt-3 mb-3 btn-showcase"  data-aos="fade-up" data-aos-delay="400"><i class="bi bi-stars"></i>Junior Web Developer</button>
                     <p class="tagline mb-3" data-aos="fade-up" data-aos-delay="600">I am passionate about turning ideas into real digital solutions through clean, modern design and code. My goal is to join a company where I can continuously learn, apply my skills, and gain hands-on experience in web development and programming. I am eager to grow in a collaborative environment, contribute to real projects, and become a valuable member of the development team.</p>
                     <div class="social-icons pb-2 pt-2 mb-2">
                         <a href="https://www.youtube.com/@michaelentera7072" target="_blank" class="youtube" data-aos="fade-up" data-aos-delay="650"><i class="bi bi-youtube"></i></a>
                         <a href="https://github.com/shshshangelo" target="_blank" class="github" data-aos="fade-up" data-aos-delay="620"><i class="bi bi-github"></i></a>
-                        <a href="https://ph.linkedin.com/in/michael-angelo-entera-1b0489369" target="_blank" class="linkedin" data-aos="fade-up" data-aos-delay="690"><i class="bi bi-linkedin"></i></a>
                         <a href="https://vercel.com/michael-enteras-projects" target="_blank" class="vercel" data-aos="fade-up" data-aos-delay="650"><i class="bi bi-lightning-charge"></i></a>
+                        <a href="https://www.onlinejobs.ph/jobseekers/info/4239711" target="_blank" class="onlinejobs" data-aos="fade-up" data-aos-delay="720"><i class="bi bi-briefcase"></i></a>
                     </div>
                     <div class="d-flex call-to-action">
                         <a href="#contact" data-aos="fade-up" data-aos-delay="700"><button type="button" class="btn me-4 primary-bg-btn"><i class="bi bi-envelope"></i> Contact Me</button></a>
                         <a href="#projects" data-aos="fade-up" data-aos-delay="800"><button type="button" class="btn btn-light secondary-bg-btn">View Portfolio <i class="bi bi-arrow-up-right-circle"></i></button></a>
+                        <a href="#" data-aos="fade-up" data-aos-delay="900" onclick="downloadResume()"><button type="button" class="btn btn-outline-light ms-3"><i class="bi bi-download"></i> Resume</button></a>
                     </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currently Working On -->
+    <section id="currently-working">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">Active</span></h6>
+            <h2 class="section-heading text-center">Currently Working On</h2>
+            <div class="row justify-content-center mt-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-8">
+                    <div class="current-work-card">
+                        <div class="work-status">
+                            <div class="status-indicator"></div>
+                            <span class="status-text">In Progress</span>
+                        </div>
+                        <h3 class="work-title">Portfolio Enhancement</h3>
+                        <p class="work-description">Continuously improving this portfolio with modern animations, better UX, and new features. Currently implementing advanced interactions and performance optimizations.</p>
+                        <div class="work-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="work-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="progress-text">75% Complete</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,9 +218,9 @@
                 </div>
                 <div class="col-lg-7">
                     <p class="bio">
-                        Hi! I’m Michael, a recent Information Technology graduate from ACLC College of Mandaue. I received awards for Best in Web Programming, Best in Database Programming, and Best in Networking. My passion started with design and quickly grew into a love for web development—bringing ideas to life through both UI and code.
-                        </br></br>I’m actively seeking opportunities to begin my career as a Junior Web Developer, where I can apply my skills, learn from real projects, and grow as part of a collaborative team. I’m driven to keep improving, embrace new challenges, and contribute value as I build my professional experience.
-                        </br></br>Outside of coding, I enjoy gaming and exploring creative ideas. I believe that learning is a continuous journey, and I’m excited for the possibilities ahead.</p>
+                        Hi! I'm Michael, a recent Information Technology graduate from ACLC College of Mandaue. I received awards for Best in Web Programming, Best in Database Programming, and Best in Networking. My passion started with design and quickly grew into a love for web development—bringing ideas to life through both UI and code.
+                        </br></br>I'm actively seeking opportunities to begin my career as a Junior Web Developer, where I can apply my skills, learn from real projects, and grow as part of a collaborative team. I'm driven to keep improving, embrace new challenges, and contribute value as I build my professional experience.
+                        </br></br>Outside of coding, I enjoy gaming and exploring creative ideas. I believe that learning is a continuous journey, and I'm excited for the possibilities ahead.</p>
                 </div>
             </div>
         </div>
@@ -265,7 +305,7 @@
         <div class="container">
             <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What I uses?</span></h6>
             <h2 class="section-heading text-center">Tools</h2>
-            <p class="text-center muted-text mt-3 mb-4">Tech stack I’m familiar with? Here are the tools I’ve worked with and used in my projects:</p>
+            <p class="text-center muted-text mt-3 mb-4">Tech stack I'm familiar with? Here are the tools I've worked with and used in my projects:</p>
             <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-6 mt-4 gy-4 tools-container" data-aos="fade-down" data-aos-delay="200">
                 <div class="col">
                     <div class="tool">
@@ -373,23 +413,23 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center">
                                 <div class="col-2">
-                                    <img src="/assets/images/projects/dreamweaver.png" class="img-fluid icon" alt="PenCraft Pro Logo">
+                                    <img src="/assets/images/projects/luminary_oracle.png" class="img-fluid icon" alt="PenCraft Pro Logo">
                                 </div>
                                 <div class="col-7 p-0">
-                                    <a href="https://dreamweaver-ai-khaki.vercel.app/" class="card-title title" target="_blank">DreamWeaver AI</a>
+                                    <a href="https://luminaryoracle-ai.vercel.app/" class="card-title title" target="_blank">Luminary Oracle</a>
                                     <p class="stacks m-0">HTML | CSS | JS | BS</p>
                                 </div>
                                 <div class="col-3 align-middle">
-                                    <a href="https://dreamweaver-ai-khaki.vercel.app/" class="btn btn-sm primary-bg-btn rounded-5" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                                    <a href="https://luminaryoracle-ai.vercel.app/" class="btn btn-sm primary-bg-btn rounded-5" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="description-container">
-                            <p class="description">DreamWeaver AI is your poetic oracle. It blends categories like love, career, and destiny to give you mystical, fun, and eerie insights. Built with passion and a touch of the cosmos, it's your digital companion for questions that stir the soul.</p>
+                            <p class="description">Luminary Oracle is your mystical guide through the cosmic realms. It illuminates your path with wisdom from the stars, offering insights into love, career, destiny, and warnings. Powered by advanced AI, it's your celestial companion for questions that touch the soul.                            </p>
                         </div>
                         <div class="banner-container">
                             <div class="overlay">
-                                <a href="https://dreamweaver-ai-khaki.vercel.app/" class="btn" target="_blank"><i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                                <a href="https://luminaryoracle-ai.vercel.app/" class="btn" target="_blank"><i class="bi bi-arrow-up-right-circle-fill"></i></a>
                             </div>
                         </div>
                     </div>
@@ -445,7 +485,7 @@
     </h6>
     <h2 class="section-heading text-center">Get In Touch</h2>
     <p class="text-center muted-text mt-3 mb-4">
-    Got a project in mind? Let’s develop it—send me a message!
+    Got a project in mind? Let's develop it—send me a message!
     </p>
     <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="500">
       <div class="col-lg-8">
@@ -509,10 +549,7 @@ window.addEventListener("scroll", function() {
   </svg>
 </button>
 
-
-
-
-    <!-- JavaScript -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <!-- JavaScript -->
     <script src="assets/js/aos.js" defer></script>
     <script src="assets/js/jquery-3.7.1.min.js" defer></script>
     <script src="assets/js/owl.carousel.min.js" defer></script>
