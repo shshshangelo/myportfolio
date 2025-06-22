@@ -887,11 +887,18 @@ a:hover{
     position: relative;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 15px;
 }
 
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--box-shadow-heavy);
+}
+
+.project-card .card-body {
+    padding: 15px;
+    text-align: center;
 }
 
 .project-card .title {
@@ -900,6 +907,8 @@ a:hover{
     font-weight: 600;
     transition: var(--transition-smooth);
     position: relative;
+    display: block;
+    margin-bottom: 8px;
 }
 
 .project-card .title::after {
@@ -926,6 +935,7 @@ a:hover{
 .project-card .description {
     font-size: 11px;
     color: var(--muted-text);
+    margin-bottom: 12px;
 }
 
 .project-card .in-progress{
@@ -935,20 +945,27 @@ a:hover{
 
 .project-card .icon{
     max-width: 70%;
+    margin: 0 auto 12px;
+    display: block;
 }
 
 .project-card .description-container{
-    padding-left: inherit;
+    padding: 15px;
+    text-align: center;
 }
 
 .project-card .description{
     font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .project-card .banner-container{
     position: relative;
     border-radius: 12px;
     overflow: hidden;
+    margin-top: 12px;
 }
 
 .project-card .banner{
@@ -988,6 +1005,7 @@ a:hover{
 
 .project-card .primary-bg-btn {
     background-color: #850dd5;
+    margin-top: 8px;
 }
 
 .project-card .primary-bg-btn:hover {
