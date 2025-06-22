@@ -48,8 +48,8 @@ As a passionate IT graduate and aspiring developer, I wanted a platform where I 
 
 You can reach out directly via the **Contact** section in the site or through:
 
-- 📧 Email: `maykelilinghaha@gmail.com`  
-- 🔗 LinkedIn: [Michael Entera](https://ph.linkedin.com/in/michael-angelo-entera-1b0489369)  
+- 📧 Email: `michaelenterax@gmail.com`  
+- 🔗 Online Jobs PH: [Michael Entera](https://www.onlinejobs.ph/jobseekers/info/4239711)  
 - 🐙 GitHub: [shshshangelo](https://github.com/shshshangelo)
 
 ---
