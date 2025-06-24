@@ -3,31 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>More Projects - Michael Entera</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Michael Entera - Junior Web Developer</title>
+
+    <meta name="title" content="Michael Entera - Junior Web Developer" />
+    <meta
+      name="description"
+      content="Michael Entera - Junior Web Developer dedicated to developing sleek, responsive, and impactful digital experiences. Explore my portfolio to see what I build."
+    />
+    <meta name="keywords" content="Michael Entera, Junior Web Developer" />
+    <meta name="author" content="Michael Entera" />
+
+    <!-- Open Graph Meta Tags / Facebook -->
+    <meta
+      property="og:title"
+      content="Michael Angelo E. Entera - Junior Web Developer"
+    />
+    <meta
+      property="og:description"
+      content="Junior Web Developer dedicated to developing sleek, responsive, and impactful digital experiences. Explore my portfolio to see what I build."
+    />
+    <meta property="og:url" content="/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Michael Entera - Junior Web Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Junior Web Developer dedicated to developing sleek, responsive, and impactful digital experiences. Explore my portfolio to see what I build."
+    />
+
+    <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts: Rubik -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
+      href="https://fonts.googleapis.com/css?family=Rubik&amp;display=swap"
     />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Preload Important resources -->
+    <link rel="preload" href="assets/css/aos.css" as="style" />
+    <link rel="preload" href="assets/css/owl.carousel.min.css" as="style" />
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style" />
+    <link rel="preload" href="assets/css/style.css" as="style" />
+
+    <!-- MS-Clarity Analytics -->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "phycesbqlg");
+    </script>
   </head>
-  <body data-bs-theme="dark">
-    <header class="py-3">
-      <div class="container d-flex justify-content-between align-items-center">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <span><</span>
-          <span class="logo-name">Michael Entera</span>
-          <span>/></span>
-        </a>
-      </div>
+
+  <body data-bs-theme="dark" data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Progress Bar -->
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Header -->
+    <header id="header">
+      <nav id="navbar" class="navbar navbar-expand-md">
+        <div class="container">
+          <a href="/" class="navbar-brand logo">
+            <span><</span>
+            <span class="logo-name">Michael Entera</span>
+            <span>/></span>
+          </a>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarMenu"
+          >
+            <div class="offcanvas-header">
+              <a
+                href="/"
+                class="offcanvas-title navbar-brand logo"
+                id="offcanvasNavbarMenu"
+                data-aos="fade-down"
+                data-aos-delay="600"
+              >
+                <span><</span>
+                <span class="logo-name">Michael Entera</span>
+                <span>/></span>
+              </a>
+              
+        </div>
+      </nav>
     </header>
 
     <section id="more-projects">
       <div class="container">
+        <br>
+        <br>
+    
         <h2 class="section-heading text-center">More Projects</h2>
         <p class="text-center muted-text mb-5">
           Here are a few more works that reflect my passion for design and
@@ -160,14 +256,6 @@
       </div>
     </section>
 
-    <footer id="footer" class="mt-5 pt-4">
-      <div class="container">
-        <p class="text-center copyright-text">
-          Made with <span>HTML, CSS, JS</span> and a lot of
-          <i class="bi bi-hearts"></i> by <span>Michael Entera</span>.
-        </p>
-      </div>
-    </footer>
 
     <!-- JavaScript -->
     <script src="assets/js/aos.js" defer></script>
