@@ -35,6 +35,21 @@ body{
     font-weight: 300;
 }
 
+/* Text Justification */
+p {
+    text-align: justify;
+}
+
+.tagline,
+.bio,
+.work-description {
+    text-align: justify;
+}
+
+#things-i-love .card-text {
+    text-align: justify;
+}
+
 a{
     color: var(--primary-color);
     text-decoration: none;
@@ -282,6 +297,20 @@ a:hover{
     margin: 18px 0px;
 }
 
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 2rem;
+        margin: 15px 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-heading {
+        font-size: 1.75rem;
+        margin: 12px 0px;
+    }
+}
+
 .cursor-not-allowed{
     cursor: not-allowed!important;
 }
@@ -413,8 +442,7 @@ a:hover{
 
 #hero {
     position: relative;
-    padding: 160px 0px 50px 0px;
-    min-height: 100vh;
+    padding: 120px 0px 30px 0px;
 }
 
 #hero .name {
@@ -456,47 +484,55 @@ a:hover{
     color: var(--muted-text);
 }
 
-.hero-portrait .pic {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 61vw;
-    background-size: contain;
-    background-position: top;
-    background-image: url(/assets/images/portrait1.png);
+/* Tablet and Medium Screens */
+@media (max-width: 992px) {
+    #hero {
+        padding: 100px 0px 30px 0px;
+    }
+    
+    #hero .name {
+        font-size: 2.4rem;
+    }
+    
+    #hero .tagline {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        padding: 80px 0px 25px 0px;
+    }
+    
+    #hero .h3 {
+        font-size: 1.1rem;
+    }
+    
+    #hero .tagline {
+        font-size: 14px;
+        letter-spacing: 1.3px;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-content .tagline {
+        text-align: justify;
+    }
 }
 
 @media (max-width: 576px) {
     #hero {
-        padding: 35px 0px 0px 0px;
+        padding: 35px 0px 20px 0px;
     }
 
-    .hero-portrait {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        max-width: 170px;
-        height: 170px;
-        max-height: 170px;
-        margin: 0 auto;
-        border: solid 3px transparent;
-        border-radius: 50%;
-        background-image: var(--primary-gradient-color), radial-gradient(circle at top left, var(--primary-color),var(--secondary-color));;
-        background-origin: border-box;
-        background-clip: content-box, border-box;
-    }
-
-    .hero-portrait .pic {
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-image: url(/assets/images/portrait1.png);
+    #hero .h3 {
+        font-size: 1rem;
     }
 
     .hero-content{
-        margin-top: 35px;
+        margin-top: 0px;
     }
 
     #hero .btn-showcase {
@@ -560,6 +596,40 @@ a:hover{
 #things-i-love {
     padding: 90px 0px;
     min-height: 100vh;
+}
+
+@media (max-width: 992px) {
+    #things-i-love {
+        padding: 70px 0px;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #things-i-love {
+        padding: 60px 0px;
+    }
+    
+    #things-i-love .card {
+        padding: 25px;
+    }
+    
+    #things-i-love .circle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    #things-i-love .circle i {
+        font-size: 1.8rem;
+    }
+    
+    #things-i-love .card-title {
+        font-size: 16px;
+    }
+    
+    #things-i-love .card-text {
+        font-size: 13px;
+    }
 }
 
 #things-i-love .card {
@@ -648,7 +718,7 @@ a:hover{
 }
 
 #things-i-love .card-text{
-    text-align: center;
+    text-align: justify;
     font-size: 14px;
     color: var(--muted-text);
 }
@@ -657,8 +727,32 @@ a:hover{
 # About Section
 --------------------------------------------------------------*/
 #about{
-    padding: 100px 0px;
-    min-height: 100vh;
+    padding: 40px 0px 100px 0px;
+}
+
+@media (max-width: 992px) {
+    #about {
+        padding: 35px 0px 80px 0px;
+    }
+    
+    #about .bio {
+        font-size: 14px;
+        padding: 25px 0 25px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #about {
+        padding: 30px 0px 60px 0px;
+    }
+    
+    .about-portrait {
+        padding: 20px 0px 20px 0px;
+    }
+    
+    .about-portrait .pic {
+        width: 75%;
+    }
 }
 
 .about-portrait{
@@ -745,6 +839,12 @@ a:hover{
     min-height: 100vh;
 }
 
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .skill{
     text-align: center;
     padding: 20px;
@@ -753,6 +853,10 @@ a:hover{
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .skill::before {
@@ -779,7 +883,8 @@ a:hover{
 .skill-image{
     width: 60px;
     height: 60px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
+    display: block;
     transition: var(--transition-smooth);
 }
 
@@ -791,6 +896,7 @@ a:hover{
     font-size: 14px;
     font-weight: 500;
     margin: 0;
+    text-align: center;
     transition: var(--transition-smooth);
 }
 
@@ -808,6 +914,12 @@ a:hover{
     min-height: 100vh;
 }
 
+.tools-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .tool{
     text-align: center;
     padding: 20px;
@@ -816,6 +928,10 @@ a:hover{
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .tool::before {
@@ -842,7 +958,8 @@ a:hover{
 .tool-image{
     width: 60px;
     height: 60px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
+    display: block;
     transition: var(--transition-smooth);
 }
 
@@ -854,6 +971,7 @@ a:hover{
     font-size: 14px;
     font-weight: 500;
     margin: 0;
+    text-align: center;
     transition: var(--transition-smooth);
 }
 
@@ -935,6 +1053,7 @@ a:hover{
 .project-card .description {
     font-size: 11px;
     color: var(--muted-text);
+    text-align: justify;
     margin-bottom: 12px;
 }
 
@@ -1172,8 +1291,14 @@ html {
 
 /* Currently Working On Section */
 #currently-working {
-    padding: 80px 0;
+    padding: 40px 0 80px 0;
     background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 992px) {
+    #currently-working {
+        padding: 35px 0 70px 0;
+    }
 }
 
 .current-work-card {
@@ -1314,9 +1439,23 @@ html {
 }
 
 /* Responsive currently working section */
+@media (max-width: 992px) {
+    .current-work-card {
+        padding: 25px;
+    }
+    
+    .work-title {
+        font-size: 22px;
+    }
+    
+    .work-description {
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 768px) {
     #currently-working {
-        padding: 60px 0;
+        padding: 30px 0 60px 0;
     }
     
     .current-work-card {
